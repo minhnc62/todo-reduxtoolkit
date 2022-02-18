@@ -49,6 +49,7 @@ const FormStyle = styled(Form)`
 const ListItem = styled(List.Item)`
   display: flex;
   margin: 8px 0;
+  padding-left: 4px;
 `;
 
 export default () => {
