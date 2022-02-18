@@ -44,25 +44,30 @@ export default () => {
   };
 
   return (
-    <Row justify="center">
-      <App span={6}>
+    <Row
+      
+      style={{ width: '50%', background: 'blue', margin: 'auto' }}
+    >
+      <App span={24}>
         <h1 className="header"> Todo list</h1>
         <Form onFinish={handleSubmit}>
           <Input
             value={todo}
             onChange={(e) => setTodo(e.target.value)}
             placeholder="Type something"
-            style={{ width: "calc(100% - 200px)", marginRight: "4px" }}
+            style={{ width: 'calc(100% - 200px)', marginRight: '4px' }}
             defaultValue="https://ant.design"
           />
           {editing ? (
             <>
-              <Button onClick={handleSubmit}  type="primary">Edit</Button>
+              <Button onClick={handleSubmit} type="primary">
+                Edit
+              </Button>
               <Button
                 type="ghost"
                 onClick={() => {
                   setEditing(null);
-                  setTodo("");
+                  setTodo('');
                 }}
               >
                 <CloseOutlined />
@@ -91,7 +96,7 @@ export default () => {
           ))}
         </List>
         <Button
-          style={{ marginTop: "20px" }}
+          style={{ marginTop: '20px' }}
           type="primary"
           className="btn-clear"
           onClick={() => dispatch(clear())}
