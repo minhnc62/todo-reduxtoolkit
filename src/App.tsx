@@ -46,7 +46,7 @@ export default () => {
   return (
     <Row
       
-      style={{ width: '50%', background: 'blue', margin: 'auto' }}
+      style={{ width: '50%', background: 'red', margin: 'auto' }}
     >
       <App span={24}>
         <h1 className="header"> Todo list</h1>
