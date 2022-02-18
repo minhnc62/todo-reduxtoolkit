@@ -141,14 +141,6 @@ export default () => {
         >
           Clear All
         </Button>
-        <Button
-          style={{ marginTop: '20px' }}
-          type="primary"
-          className="btn-clear"
-          onClick={() => dispatch(clear())}
-        >
-          Clear All
-        </Button>
       </App>
     </RowStyled>
   );
