@@ -10,10 +10,13 @@ import { todoState } from "../store/todoSlice";
 interface TodoItemProps {
     item: todoState;
   editing: any;
-  
+}
+export interface ItemProps {
+  id: number,
+  content: string
 }
 
-export default ({ item: { id, content },}: TodoItemProps):JSX.Element=> {
+export default ({ id, content}: ItemProps ):JSX.Element=> {
   const dispatch = useAppDispatch();
   const [editing, setEditing] = useState<TodoItemProps["editing"]>(null);
   const [todoEdit, setTodoEdit] = useState("");
